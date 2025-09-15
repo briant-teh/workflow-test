@@ -29,3 +29,10 @@ jobs:
     
       - name: Run tests
         run: cargo test
+
+  fmt:
+    name: Rustfmt
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enforce formatting
+        run: cargo fmt --check
