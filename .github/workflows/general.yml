@@ -34,5 +34,8 @@ jobs:
     name: Rustfmt
     runs-on: ubuntu-latest
     steps:
+      # Downloads a copy of the code in your repository before running CI tests
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - name: Enforce formatting
         run: cargo fmt --check
